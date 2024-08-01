@@ -1,10 +1,12 @@
 /// @description Initialize Object
 
-/* Movement & Collision */
+#region Movement & Collision 
 movement_speed = 100;
 is_moving = false;
 collision_object = undefined;
 collision_line_length = 20;
+
+collisionmap = layer_tilemap_get_id("Collision");
 
 dir = 0; 
 enum DIRECTION {
@@ -14,7 +16,9 @@ enum DIRECTION {
 	UP
 }	
 
-/* Animation */
+#endregion
+
+#region Animation 
 sprite_index = spr_player;
 image_index = 0;
 
@@ -32,3 +36,5 @@ function set_animation(_state) {
 }
 
 set_animation("down");
+
+#endregion
