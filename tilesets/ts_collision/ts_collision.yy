@@ -8,7 +8,7 @@
     "TileSerialiseData":[],
   },
   "name":"ts_collision",
-  "out_columns":1,
+  "out_columns":2,
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
@@ -27,7 +27,7 @@
     "path":"texturegroups/Default",
   },
   "tileAnimation":{
-    "FrameData":[0,1,],
+    "FrameData":[0,1,2,3,4,5,],
     "SerialiseFrameCount":1,
   },
   "tileAnimationFrames":[],
@@ -38,5 +38,5 @@
   "tileWidth":20,
   "tilexoff":0,
   "tileyoff":0,
-  "tile_count":2,
+  "tile_count":6,
 }
