@@ -19,10 +19,10 @@ sprite_index = spr_player;
 image_index = 0;
 
 animations = {
-	down:	{frames: [ 0, 3 ], speed: 6 },
-	left:	{frames: [ 4, 5 ], speed: 6 },
-	right:	{frames: [ 6, 7 ], speed: 6 },
-	up:		{frames: [ 8, 11], speed: 6 },
+	down:	{ frames: [ 0, 3 ], speed: 6 },
+	left:	{ frames: [ 4, 5 ], speed: 6 },
+	right:	{ frames: [ 6, 7 ], speed: 6 },
+	up:		{ frames: [ 8, 11], speed: 6 },
 }
 
 function set_animation(_state) {
