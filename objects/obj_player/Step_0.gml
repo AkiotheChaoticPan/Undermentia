@@ -11,7 +11,7 @@ if (_move_x != 0) {
 	is_moving = true;
     dir = (_move_x > 0) ? DIRECTION.RIGHT : DIRECTION.LEFT;
     set_animation((_move_x > 0) ? "right" : "left");
-	if (check_collision(_new_x, _new_y)) {
+	if (check_collision(movement_speed * _delta)) {
 		x = _new_x;
 		y = _new_y;
 	}
@@ -19,7 +19,7 @@ if (_move_x != 0) {
 	is_moving = true;
     dir = (_move_y > 0) ? DIRECTION.DOWN : DIRECTION.UP;
     set_animation((_move_y > 0) ? "down" : "up");
-	if (check_collision(_new_x, _new_y)) {
+	if (check_collision(movement_speed * _delta)) {
 		x = _new_x;
 		y = _new_y;
 	}
@@ -30,34 +30,29 @@ if (_move_x != 0) {
 
 // Please ignore this complete mess. It is hideous. I know.
 // We can crunch it down later, for now it's not important.
-function check_collision(_dx, _dy) {
-    var _map_id = layer_tilemap_get_id(layer_get_id("Collision"));
+function check_collision(_change) {
+	var _map_id = layer_tilemap_get_id(layer_get_id("Collision"));
     
-    var new_bbox_left = bbox_left + _dx;
-    var new_bbox_right = bbox_right + _dx;
-    var new_bbox_top = bbox_top + _dy;
-    var new_bbox_bottom = bbox_bottom + _dy;
-
-    if (dir == DIRECTION.DOWN) {
-        var _l_bottom = tilemap_get_at_pixel(_map_id, bbox_left, new_bbox_bottom);
-        var _r_bottom = tilemap_get_at_pixel(_map_id, bbox_right, new_bbox_bottom);
-        if (_l_bottom != 0 || _r_bottom != 0) return true;
-
-    } else if (dir == DIRECTION.LEFT) {
-        var _l_top = tilemap_get_at_pixel(_map_id, new_bbox_left, bbox_top);
-        var _l_bottom = tilemap_get_at_pixel(_map_id, new_bbox_left, bbox_bottom);
-        if (_l_top != 0 || _l_bottom != 0) return true;
-
-    } else if (dir == DIRECTION.RIGHT) {
-        var _r_top = tilemap_get_at_pixel(_map_id, new_bbox_right, bbox_top);
-        var _r_bottom = tilemap_get_at_pixel(_map_id, new_bbox_right, bbox_bottom);
-        if (_r_top != 0 || _r_bottom != 0) return true;
-
-    } else if (dir == DIRECTION.UP) {
-        var _l_top = tilemap_get_at_pixel(_map_id, bbox_left, new_bbox_top);
-        var _r_top = tilemap_get_at_pixel(_map_id, bbox_right, new_bbox_top);
-        if (_l_top != 0 || _r_top != 0) return true;
-    }
-    
-    return false;
+	if (dir == DIRECTION.DOWN) {
+		var _l_bottom = tilemap_get_at_pixel(_map_id, bbox_left - _change, bbox_bottom);
+		var _r_bottom = tilemap_get_at_pixel(_map_id, bbox_right + _change, bbox_bottom);
+		if (_l_bottom == 0 && _r_bottom == 0) return true;
+		
+	} else if (dir == DIRECTION.LEFT) {
+		var _l_top = tilemap_get_at_pixel(_map_id, bbox_left - _change, bbox_top);
+		var _l_bottom = tilemap_get_at_pixel(_map_id, bbox_left - _change, bbox_bottom);
+		if (_l_top == 0 && _l_bottom == 0) return true;	
+		
+	} else if (dir == DIRECTION.RIGHT) {
+		var _r_top = tilemap_get_at_pixel(_map_id, bbox_right + _change, bbox_top);
+		var _r_bottom = tilemap_get_at_pixel(_map_id, bbox_right + _change, bbox_bottom);
+		if (_r_top == 0 && _r_bottom == 0) return true;
+		
+	} else if (dir == DIRECTION.UP) {
+		var _l_top = tilemap_get_at_pixel(_map_id, bbox_left - _change, bbox_top);
+		var _r_top = tilemap_get_at_pixel(_map_id, bbox_right + _change, bbox_top);
+		if (_l_top == 0 && _r_top == 0) return true;
+	}
+	show_debug_message("Failed");
+	return false;
 }
