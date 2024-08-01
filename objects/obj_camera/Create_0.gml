@@ -7,7 +7,7 @@ zoom_width = camera_get_view_width(view_camera[0]);
 zoom_height = camera_get_view_height(view_camera[0]);
 
 // Defines smoothness of camera follow/zoom
-cam_follow_lerp = 4;
+cam_follow_lerp = 5;
 cam_zoom_lerp = 10;
 
 cam_zoom_level = 1;
