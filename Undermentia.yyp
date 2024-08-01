@@ -47,6 +47,7 @@
     {"id":{"name":"obj_savelocation","path":"objects/obj_savelocation/obj_savelocation.yy",},},
     {"id":{"name":"obj_toriel","path":"objects/obj_toriel/obj_toriel.yy",},},
     {"id":{"name":"rm_testbed","path":"rooms/rm_testbed/rm_testbed.yy",},},
+    {"id":{"name":"scr_anim_bound","path":"scripts/scr_anim_bound/scr_anim_bound.yy",},},
     {"id":{"name":"bgm_ruins","path":"sounds/bgm_ruins/bgm_ruins.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
     {"id":{"name":"spr_savelocation","path":"sprites/spr_savelocation/spr_savelocation.yy",},},
