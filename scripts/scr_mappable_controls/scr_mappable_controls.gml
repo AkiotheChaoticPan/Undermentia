@@ -2,7 +2,7 @@ global._connected_gamepad = 0;
 function find_connected_gamepad() {
 	for(var _i = 0; _i < gamepad_get_device_count(); _i++) {
 		if(gamepad_is_connected(_i)) {
-			_connected_gamepad = _i;
+			global._connected_gamepad = _i;
 			break;
 		}
 	}
