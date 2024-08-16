@@ -1,8 +1,8 @@
 // Initialize movement variables based on arrow key inputs
-var right = keyboard_check(vk_right);
-var left  = keyboard_check(vk_left);
-var down  = keyboard_check(vk_down);
-var up    = keyboard_check(vk_up);
+var right = check_right_pressed();
+var left  = check_left_pressed();
+var down  = check_down_pressed();
+var up    = check_up_pressed();
 
 var HorizontalMovement = 0;
 var VerticalMovement = 0;

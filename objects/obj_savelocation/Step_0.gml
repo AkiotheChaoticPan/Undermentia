@@ -1,5 +1,5 @@
 
-if place_meeting(x, y, obj_player) && keyboard_check_pressed(ord("Z")) {
+if place_meeting(x, y, obj_player) && check_confirm_pressed() {
     if file_exists("Save.sav"){
 		file_delete("Save.sav");
 		

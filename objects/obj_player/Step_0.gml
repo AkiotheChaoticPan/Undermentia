@@ -1,8 +1,8 @@
 /// @description
 
 var _delta = delta_time / 1000000;
-var _move_x = keyboard_check(vk_right) - keyboard_check(vk_left);
-var _move_y = keyboard_check(vk_down) - keyboard_check(vk_up);
+var _move_x = check_right_pressed() - check_left_pressed();
+var _move_y = check_down_pressed() - check_up_pressed();
 
 var _new_x = x + (_move_x * movement_speed * _delta);
 var _new_y = y + (_move_y * movement_speed * _delta);
