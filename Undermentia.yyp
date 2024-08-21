@@ -59,6 +59,7 @@
     {"id":{"name":"obj_trigger_roomchange","path":"objects/obj_trigger_roomchange/obj_trigger_roomchange.yy",},},
     {"id":{"name":"rm_testbed","path":"rooms/rm_testbed/rm_testbed.yy",},},
     {"id":{"name":"rm_testroom","path":"rooms/rm_testroom/rm_testroom.yy",},},
+    {"id":{"name":"rm_title","path":"rooms/rm_title/rm_title.yy",},},
     {"id":{"name":"scr_anim_bind","path":"scripts/scr_anim_bind/scr_anim_bind.yy",},},
     {"id":{"name":"bgm_ruins","path":"sounds/bgm_ruins/bgm_ruins.yy",},},
     {"id":{"name":"spr_collision","path":"sprites/spr_collision/spr_collision.yy",},},
@@ -81,6 +82,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"rm_title","path":"rooms/rm_title/rm_title.yy",},},
     {"roomId":{"name":"rm_testbed","path":"rooms/rm_testbed/rm_testbed.yy",},},
     {"roomId":{"name":"rm_testroom","path":"rooms/rm_testroom/rm_testroom.yy",},},
   ],
