@@ -11,11 +11,11 @@ function find_connected_gamepad() {
 find_connected_gamepad();
 
 function check_up_pressed() {
-	return keyboard_check(vk_up) || (gamepad_axis_value(global._connected_gamepad, gp_axislv) > 0);
+	return keyboard_check(vk_up) || (gamepad_axis_value(global._connected_gamepad, gp_axislv) < 0);
 }
 
 function check_down_pressed() {
-	return keyboard_check(vk_down) || (gamepad_axis_value(global._connected_gamepad, gp_axislv) < 0);
+	return keyboard_check(vk_down) || (gamepad_axis_value(global._connected_gamepad, gp_axislv) > 0);
 }
 
 function check_left_pressed() {
