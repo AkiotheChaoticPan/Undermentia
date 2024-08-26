@@ -18,6 +18,10 @@ if (keyboard_check(vk_tab)) {
 	fade_screen(1, #ffffff, 0.5);	
 }
 
+if (keyboard_check_pressed(ord("A"))) {
+	display_dialogue(0);
+}
+
 // Set Direction & Get Animation
 if (_move_x != 0) {
 	is_moving = true;

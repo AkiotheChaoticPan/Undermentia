@@ -63,6 +63,8 @@
     {"id":{"name":"rm_testbed","path":"rooms/rm_testbed/rm_testbed.yy",},},
     {"id":{"name":"rm_testroom","path":"rooms/rm_testroom/rm_testroom.yy",},},
     {"id":{"name":"scr_anim_bind","path":"scripts/scr_anim_bind/scr_anim_bind.yy",},},
+    {"id":{"name":"scr_dialogue_database","path":"scripts/scr_dialogue_database/scr_dialogue_database.yy",},},
+    {"id":{"name":"scr_dialogue_handler","path":"scripts/scr_dialogue_handler/scr_dialogue_handler.yy",},},
     {"id":{"name":"scr_mappable_controls","path":"scripts/scr_mappable_controls/scr_mappable_controls.yy",},},
     {"id":{"name":"bgm_ruins","path":"sounds/bgm_ruins/bgm_ruins.yy",},},
     {"id":{"name":"spr_collision","path":"sprites/spr_collision/spr_collision.yy",},},
