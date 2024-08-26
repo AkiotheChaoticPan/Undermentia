@@ -3,4 +3,4 @@
  */
 
 audio_stop_all();
-audio_play_sound(bgm_ruins, 1, true);
+audio_play_sound(bgm_beginning_menu, 1, true);
