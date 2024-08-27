@@ -1,5 +1,6 @@
 /// @description Setup parameters
 depth = -9998;
+option = 0;
 background_width = 480;
 background_height = 96;
 image_xscale = background_width / 32;
@@ -16,9 +17,11 @@ item = undefined;
 play = undefined;
 sound = undefined;
 loop = undefined;
+options = [undefined, undefined];
+auto = false;
 
 text_index = 0;
-text = "";
+text = "* If you're reading this, something went wrong. Please reset your game.";
 text_lenght = 0;
 character = undefined;
 emotion = undefined;

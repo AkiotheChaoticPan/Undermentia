@@ -66,7 +66,7 @@ function check_left_pressed() {
 
 function check_right_pressed() {
 	_value = gamepad_axis_value(global._connected_gamepad, gp_axislh);
-	_is_pressed = keyboard_check_pressed(vk_left) || (_value > 0 && _prev_value_x != value);
+	_is_pressed = keyboard_check_pressed(vk_right) || (_value > 0 && _prev_value_x != value);
 	_prev_value_x = _value;
 	return _is_pressed;
 }

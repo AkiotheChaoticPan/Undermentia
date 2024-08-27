@@ -11,6 +11,9 @@ function display_dialogue(_num){
 	instance.sound = dialogue.sound;
 	instance.loop = dialogue.loop;
 	instance.text_lenght = string_length(dialogue.text);
+	instance.options[0] = dialogue.option1;
+	instance.options[1] = dialogue.option2;
+	instance.auto = dialogue.auto;
 }
 
 /// @param dialogue_number textbox_instance
@@ -25,4 +28,7 @@ function display_dialogue_textbox(_num, _textbox){
 	_textbox.sound = dialogue.sound;
 	_textbox.loop = dialogue.loop;
 	_textbox.text_lenght = string_length(dialogue.text);
+	_textbox.options[0] = dialogue.option1;
+	_textbox.options[1] = dialogue.option2;
+	_textbox.auto = dialogue.auto;
 }
