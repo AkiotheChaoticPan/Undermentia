@@ -17,15 +17,28 @@ if(!setup) {
 			last_free_space = _c + 1;
 		}
 		
-		if(_txt_w - break_offset > background_width - (margin_x * 2)) {
+		if(_txt_w - break_offset > background_width - (margin_x * 2) - (character != undefined ? 64 + margin_x : 0)) {
 			line_break[break_num] = last_free_space;
 			break_num++;
 			break_offset = string_width(string_copy(text, 1, last_free_space)) - string_width(string_char_at(text, last_free_space));
 		}
+		
+		color_char[_c] = #ffffff;
+		for(var _i = 0; _i < array_length(colors); _i++) {
+			color_char[_c] = colors[_i].start <= _c && colors[_i].end_pos >= _c ? colors[_i].color : color_char[_c];
+		}
+		effect_char[_c] = [];
+		effect_char_params[_c] = [];
+		for(var _i = 0; _i < array_length(effects); _i++) {
+			if(effects[_i].start <= _c && effects[_i].end_pos >= _c) {
+				array_insert(effect_char[_c], array_length(effect_char[_c]), effects[_i].effect);
+				array_insert(effect_char_params[_c], array_length(effect_char_params[_c]), effects[_i].params);
+			}
+		}
 	}
 	
 	for(var _c = 0; _c < text_lenght; _c++) {
-		var _txt_x = (background_width / 2) + (character != undefined ? 64 + margin_x : 0) - margin_x;
+		var _txt_x = (background_width / 2) - (character != undefined ? 64 + margin_x : 0) - margin_x;
 		var _txt_y = (background_height / 2) - margin_y;
 		
 		var _txt_w = string_width(string_copy(text, 1, _c + 1)) - string_width(chars[_c]);
@@ -45,10 +58,26 @@ if(!setup) {
 	}
 }
 
-if(text_index < text_lenght) {
+if(text_index < text_lenght && txt_timer <= 0) {
 	text_index += text_speed
 	text_index = check_return_pressed() ? text_lenght : text_index;
 	text_index = clamp(text_index, 0, text_lenght);
+	
+	if(snd_count < snd_delay) {
+		snd_count++;
+	} else {
+		snd_count = 0;
+		audio_play_sound(voice, 0, false);
+	}
+	
+	var _curr_char = string_char_at(text, text_index);
+	
+	if(_curr_char == "." || _curr_char == "," || _curr_char == "?" || _curr_char == "!") {
+		txt_timer = txt_wait_time;
+	}
+} else if(text_index < text_lenght && txt_timer > 0) {
+	text_index = check_return_pressed() ? text_lenght : text_index;
+	txt_timer--;
 } else if(check_confirm_pressed() || auto) {
 	if(play) {
 		//remaking after audio manager
@@ -91,11 +120,14 @@ draw_self();
 
 for(var _c = 0; _c < min(text_index, text_lenght); _c++) {
 	var _c_clamped = min(_c, text_index);
-	draw_text(x - char_x[_c_clamped], y - char_y[_c_clamped], chars[_c_clamped]);
+	var _x_offset = (array_contains(effect_char[_c], "shake") ? random_range(-1, 1) : 0) * 1.3;
+	var _y_offset = (array_contains(effect_char[_c], "shake") ? random_range(-1, 1) : 0) * 1.3;
+	draw_text_color(x - char_x[_c_clamped] + _x_offset, y - char_y[_c_clamped] + _y_offset, chars[_c_clamped], color_char[_c], color_char[_c], color_char[_c], color_char[_c], 1);
 }
 
-// var _drawn_text = string_copy(text, 1, text_index);
-// draw_text_ext(x - (background_width / 2) + margin_x + (character != undefined ? 64 + margin_x : 0), y - (background_height / 2) + margin_y, _drawn_text, line_separation, background_width - (margin_x * 2) - (character != undefined ? 64 : 0));
+if(character != undefined) {
+	draw_sprite(character, emotion, x - (background_width / 2) + margin_x, y - (background_height / 2) + margin_y);
+}
 
 if(options[0] != undefined && text_index == text_lenght) {
 	var _col0 = option == 0 ? c_yellow : c_white;

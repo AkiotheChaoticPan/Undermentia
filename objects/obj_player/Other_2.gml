@@ -7,5 +7,5 @@ if file_exists("Save.sav") {
 	y = ini_read_real("Save1","y",0);
 	ini_close();
 	
-	 room_goto(loadedRoom);
+	room_goto(loadedRoom);
 }
