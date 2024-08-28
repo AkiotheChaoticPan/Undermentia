@@ -1,6 +1,7 @@
 global._connected_gamepad = 0;
 _prev_value_x = 0;
 _prev_value_y = 0;
+
 function find_connected_gamepad() {
 	for(var _i = 0; _i < gamepad_get_device_count(); _i++) {
 		if(gamepad_is_connected(_i)) {
@@ -11,6 +12,7 @@ function find_connected_gamepad() {
 }
 
 find_connected_gamepad();
+gamepad_set_axis_deadzone(global._connected_gamepad, 0.1);
 
 #region Holding
 function check_up() {
