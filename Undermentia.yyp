@@ -47,6 +47,7 @@
     {"id":{"name":"note_roadmap","path":"notes/note_roadmap/note_roadmap.yy",},},
     {"id":{"name":"obj_audiomanager","path":"objects/obj_audiomanager/obj_audiomanager.yy",},},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
+    {"id":{"name":"obj_default_room","path":"objects/obj_default_room/obj_default_room.yy",},},
     {"id":{"name":"obj_fadein","path":"objects/obj_fadein/obj_fadein.yy",},},
     {"id":{"name":"obj_fadeout","path":"objects/obj_fadeout/obj_fadeout.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
@@ -57,6 +58,7 @@
     {"id":{"name":"obj_trigger_cutscene","path":"objects/obj_trigger_cutscene/obj_trigger_cutscene.yy",},},
     {"id":{"name":"obj_trigger_interactable","path":"objects/obj_trigger_interactable/obj_trigger_interactable.yy",},},
     {"id":{"name":"obj_trigger_roomchange","path":"objects/obj_trigger_roomchange/obj_trigger_roomchange.yy",},},
+    {"id":{"name":"rm_default","path":"rooms/rm_default/rm_default.yy",},},
     {"id":{"name":"rm_testbed","path":"rooms/rm_testbed/rm_testbed.yy",},},
     {"id":{"name":"rm_testroom","path":"rooms/rm_testroom/rm_testroom.yy",},},
     {"id":{"name":"scr_anim_bind","path":"scripts/scr_anim_bind/scr_anim_bind.yy",},},
@@ -84,6 +86,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_testbed","path":"rooms/rm_testbed/rm_testbed.yy",},},
     {"roomId":{"name":"rm_testroom","path":"rooms/rm_testroom/rm_testroom.yy",},},
+    {"roomId":{"name":"rm_default","path":"rooms/rm_default/rm_default.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
