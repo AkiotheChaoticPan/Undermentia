@@ -1,7 +1,7 @@
 /// @function anim_bind:
 /// @description Binds an image_index to a certain range of values.
-/// @param {real} _num: A given image_index
-/// @param {table} _range: A range of minimum and maximum values (e.g [0, 5])
+/// @param {real} _index: A given image_index
+/// @param {array} _range: A range of minimum and maximum values (e.g [0, 5])
 
 function anim_bind(_index, _range)
 {
