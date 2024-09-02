@@ -44,6 +44,7 @@
   },
   "name":"Undermentia",
   "resources":[
+    {"id":{"name":"fnt_undertale","path":"fonts/fnt_undertale/fnt_undertale.yy",},},
     {"id":{"name":"note_roadmap","path":"notes/note_roadmap/note_roadmap.yy",},},
     {"id":{"name":"obj_audiomanager","path":"objects/obj_audiomanager/obj_audiomanager.yy",},},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
@@ -51,6 +52,7 @@
     {"id":{"name":"obj_fadeout","path":"objects/obj_fadeout/obj_fadeout.yy",},},
     {"id":{"name":"obj_graphicmanager","path":"objects/obj_graphicmanager/obj_graphicmanager.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
+    {"id":{"name":"obj_save_menu","path":"objects/obj_save_menu/obj_save_menu.yy",},},
     {"id":{"name":"obj_savelocation","path":"objects/obj_savelocation/obj_savelocation.yy",},},
     {"id":{"name":"obj_soul","path":"objects/obj_soul/obj_soul.yy",},},
     {"id":{"name":"obj_title","path":"objects/obj_title/obj_title.yy",},},
@@ -66,6 +68,7 @@
     {"id":{"name":"spr_collision","path":"sprites/spr_collision/spr_collision.yy",},},
     {"id":{"name":"spr_fade","path":"sprites/spr_fade/spr_fade.yy",},},
     {"id":{"name":"spr_flowerbed","path":"sprites/spr_flowerbed/spr_flowerbed.yy",},},
+    {"id":{"name":"spr_menu_background","path":"sprites/spr_menu_background/spr_menu_background.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
     {"id":{"name":"spr_savelocation","path":"sprites/spr_savelocation/spr_savelocation.yy",},},
     {"id":{"name":"spr_soul","path":"sprites/spr_soul/spr_soul.yy",},},
