@@ -8,10 +8,13 @@ draw_set_font(fnt_undertale)
 draw_set_valign(fa_middle)
 draw_set_halign(fa_center)
 
-draw_text(top_left_corner[0] + padding_x, top_left_corner[1] + padding_y , "CHARA") // Link properly with better save format
-draw_text(bottom_right_corner[0] - padding_x, top_left_corner[1] + padding_y , "99:99") // Link properly with better save format
+var _default_color = has_saved ? c_yellow : c_white
+var _scene_text = has_saved ? "File saved" :  "Ruins - Entrance"
 
-draw_text(x, y - 4, "Ruins - Entrance")
+draw_text_color(top_left_corner[0] + padding_x, top_left_corner[1] + padding_y , "CHARA", _default_color, _default_color, _default_color, _default_color, 1) // Link properly with better save format
+draw_text_color(bottom_right_corner[0] - padding_x, top_left_corner[1] + padding_y , "99:99", _default_color, _default_color, _default_color, _default_color, 1) // Link properly with better save format
+
+draw_text_color(x, y - 4, _scene_text, _default_color, _default_color, _default_color, _default_color, 1)
 
 var _colors = [c_white, c_white]
 

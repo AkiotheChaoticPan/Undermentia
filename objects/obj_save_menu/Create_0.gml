@@ -7,6 +7,7 @@ top_left_corner = [x-width/2, y-height/2]
 bottom_right_corner = [x+width/2, y+height/2]
 
 should_destroy = false
+has_saved = false
 
 padding_y = 20
 padding_x = 48
