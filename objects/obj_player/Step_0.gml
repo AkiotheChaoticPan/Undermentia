@@ -12,7 +12,7 @@ var _new_y = y + (_move_y * movement_speed * _delta);
 /* This collision is not ideal at all, but it works well enough for what we need right now.
  * Inefficient, but basic and snappy. We can overhaul it later! */
  
-if (global.player_interact) {
+if (can_player_interact) {
 	if (!place_meeting(_new_x, y, collision_map)) x = _new_x;
 	if (!place_meeting(x, _new_y, collision_map)) y = _new_y;
 }
