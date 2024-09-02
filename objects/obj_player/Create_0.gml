@@ -42,6 +42,11 @@ function get_animation(_state) {
 	animation_speed = passed_animation.speed;
 }
 
+function create_empty_savedata() {
+	ds_map_add_map(global.savedata, "player",  ds_map_create())
+	ds_map_add_map(global.savedata, "progress",  global.progress)
+}
+
 get_animation("down");
 
 
