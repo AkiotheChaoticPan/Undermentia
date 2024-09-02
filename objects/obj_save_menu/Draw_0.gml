@@ -11,7 +11,7 @@ draw_set_halign(fa_center)
 var _default_color = has_saved ? c_yellow : c_white
 var _scene_text = has_saved ? "File saved" : full_room_name
 
-draw_text_color(top_left_corner[0] + padding_x, top_left_corner[1] + padding_y , "CHARA", _default_color, _default_color, _default_color, _default_color, 1) // Link properly with better save format
+draw_text_color(top_left_corner[0] + padding_x, top_left_corner[1] + padding_y , player_name, _default_color, _default_color, _default_color, _default_color, 1) // Link properly with better save format
 draw_text_color(bottom_right_corner[0] - padding_x, top_left_corner[1] + padding_y , save_time_string, _default_color, _default_color, _default_color, _default_color, 1) // Link properly with better save format
 
 draw_text_color(x, y - 4, _scene_text, _default_color, _default_color, _default_color, _default_color, 1)

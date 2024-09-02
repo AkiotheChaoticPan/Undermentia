@@ -56,6 +56,9 @@ function fill_in_empty_savedata() {
 	ds_map_add(global.player_data, "y", y)
 	ds_map_add(global.player_data, "time", 0)
 	ds_map_add(global.player_data, "room", room_get_name(rm_testbed))
+	ds_map_add(global.player_data, "name", "CHARA")
+	ds_map_add(global.player_data, "exp", 0)
+	ds_map_add(global.player_data, "love", 0)
 }
 
 get_animation("down");
