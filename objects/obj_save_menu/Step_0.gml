@@ -12,6 +12,7 @@ var _confirm_key = check_confirm_pressed()
 
 if ((_right_key || _left_key) && !has_saved) {
 	pos = 1 - pos
+	audio_play_sound(snd_bip, 0, false)
 }
 
 if (_confirm_key) {
@@ -22,5 +23,6 @@ if (_confirm_key) {
 		option[0] = ""
 		has_saved = true
 		save()
+		audio_play_sound(snd_save, 1, false)
 	}
 }
