@@ -1,6 +1,3 @@
-global.savedata = ds_map_create();   // This is the full savedata, careful with access here
-global.progress = ds_map_create();   // This is specifically for any extra storage, go wild
-
 if file_exists("Save.sav") {
 	var _default_room = room_get_name(rm_testbed);
 	var _file = file_text_open_read("Save.sav");

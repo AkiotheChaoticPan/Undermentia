@@ -43,6 +43,8 @@ function get_animation(_state) {
 }
 
 function create_empty_savedata() {
+	global.savedata = ds_map_create();   // This is the full savedata, careful with access here
+	global.progress = ds_map_create();   // This is specifically for any extra storage, go wild
 	ds_map_add_map(global.savedata, "player",  ds_map_create())
 	ds_map_add_map(global.savedata, "progress",  global.progress)
 }
