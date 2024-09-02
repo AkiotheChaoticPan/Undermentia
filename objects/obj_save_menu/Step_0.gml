@@ -1,7 +1,7 @@
 /// @description
 
 if (should_destroy) {
-	global.player_interact = true
+	obj_player.can_player_interact = true
 	instance_destroy(id)
 }
 
