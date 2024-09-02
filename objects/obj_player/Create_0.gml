@@ -1,5 +1,6 @@
 #region Movement & Collision 
 
+global.player_interact = true
 movement_speed = 100;
 is_moving = false;
 dir = 0; 
