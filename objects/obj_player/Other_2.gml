@@ -6,6 +6,8 @@ if file_exists("Save.sav") {
 		global.savedata = json_decode(file_text_read_string(_file))
 		global.progress = ds_map_find_value(global.savedata, "progress")
 		global.player_data = ds_map_find_value(global.savedata, "player")
+		
+		 fill_in_empty_savedata()
 	
 		var _loaded_room = asset_get_index(ds_map_find_value(ds_map_find_value(global.savedata, "player"), "room"));
 		x = ds_map_find_value(ds_map_find_value(global.savedata, "player"), "x")
