@@ -45,8 +45,12 @@ function get_animation(_state) {
 function create_empty_savedata() {
 	global.savedata = ds_map_create();   // This is the full savedata, careful with access here
 	global.progress = ds_map_create();   // This is specifically for any extra storage, go wild
-	ds_map_add_map(global.savedata, "player",  ds_map_create())
+	global.player_data =  ds_map_create();  // Situation-agnostic player data.
+	ds_map_add_map(global.savedata, "player", global.player_data)
 	ds_map_add_map(global.savedata, "progress",  global.progress)
+	ds_map_replace(global.player_data, "x", x)
+	ds_map_replace(global.player_data, "y", y)
+	ds_map_replace(global.player_data, "room", room_get_name(rm_testbed))
 }
 
 get_animation("down");

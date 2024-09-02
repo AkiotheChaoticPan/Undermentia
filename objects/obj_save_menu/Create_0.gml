@@ -6,6 +6,9 @@ height = 110;
 top_left_corner = [x-width/2, y-height/2]
 bottom_right_corner = [x+width/2, y+height/2]
 
+save_room_name = ds_map_find_value(ds_map_find_value(global.savedata, "player"), "room")
+full_room_name = ds_map_find_value(global.full_room_names, save_room_name)
+
 should_destroy = false
 has_saved = false
 
