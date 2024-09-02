@@ -18,9 +18,9 @@ draw_text_color(x, y - 4, _scene_text, _default_color, _default_color, _default_
 
 var _colors = [c_white, c_white]
 
-for (var i = 0; i < op_length; i++) {
-	if (i == pos) {
-	  _colors[i] = c_yellow
+for (var _i = 0; _i < op_length; _i++) {
+	if (_i == pos) {
+	  _colors[_i] = c_yellow
 	}
 }
 
