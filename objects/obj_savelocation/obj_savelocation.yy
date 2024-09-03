@@ -1,9 +1,7 @@
 {
   "$GMObject":"",
   "%Name":"obj_savelocation",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"obj_savelocation",
   "overriddenProperties":[],
