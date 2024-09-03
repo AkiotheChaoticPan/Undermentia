@@ -1,13 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_savelocation",
-  "eventList":[],
+  "%Name":"obj_item_overworld",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_savelocation",
+  "name":"obj_item_overworld",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Inventory",
+    "path":"folders/Objects/Inventory.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_savelocation",
-    "path":"sprites/spr_savelocation/spr_savelocation.yy",
+    "name":"spr_item",
+    "path":"sprites/spr_item/spr_item.yy",
   },
   "spriteMaskId":null,
   "visible":true,

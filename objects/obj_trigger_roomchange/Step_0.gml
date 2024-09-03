@@ -10,14 +10,18 @@
  * - Some kind of list/tree reference system so designers don't have to hardcode (x,y) coords
  */
  
-if (place_meeting(x, y, obj_player) && !recently_triggered) {
-	recently_triggered = true;
-	{
-		if ( !(target_x == pointer_null || target_y == pointer_null)) {
-			if ( !(target_room == noone)) { 
-				instance_create_depth(0, 0, -9999, obj_fadein);
-				alarm[0] = 15;
-			}
+ if (place_meeting(x, y, obj_player)) {
+	if (target_x != pointer_null || target_y != pointer_null) {
+		if (target_room != noone) {
+			room_goto(target_room);
+			obj_player.x = target_x;
+			obj_player.y = target_y;
+			
 		}
-	} 
-}
+	}	
+	
+	show_debug_message("Room transition failed");
+	
+ } 
+
+	
