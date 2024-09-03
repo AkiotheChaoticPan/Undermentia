@@ -22,6 +22,9 @@ collision_map = layer_tilemap_get_id("Collision");
 sprite_index = spr_player;
 image_index = 0;
 
+animation_frames = []
+animation_speed = 0
+
 animations = {
 	down:	{ frames: [ 0, 3 ], speed: 6 },
 	left:	{ frames: [ 4, 5 ], speed: 6 },
