@@ -18,9 +18,13 @@ if (global.menu_open) {
 
 
 /* This collision is not ideal at all, but it works well enough for what we need right now.
-* Inefficient, but basic and snappy. We can overhaul it later! */
-if (!place_meeting(_new_x, y, collision_map)) x = _new_x;
-if (!place_meeting(x, _new_y, collision_map)) y = _new_y;
+ * Inefficient, but basic and snappy. We can overhaul it later! */
+ 
+if (can_player_interact) {
+	if (!place_meeting(_new_x, y, collision_map)) x = _new_x;
+	if (!place_meeting(x, _new_y, collision_map)) y = _new_y;
+}
+
 
 if (keyboard_check(vk_tab)) {
 	fade_screen(1, #ffffff, 0.5);	

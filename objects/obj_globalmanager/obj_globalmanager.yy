@@ -1,16 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_fadeout",
+  "%Name":"obj_globalmanager",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_fadeout",
+  "name":"obj_globalmanager",
   "overriddenProperties":[],
   "parent":{
-    "name":"Fade",
-    "path":"folders/Objects/Fade.yy",
+    "name":"Core",
+    "path":"folders/Objects/Core.yy",
   },
   "parentObjectId":null,
   "persistent":true,
