@@ -11,13 +11,13 @@
     {"name":"inst_174E906E","path":"rooms/rm_testbed/rm_testbed.yy",},
     {"name":"inst_E96D3BF","path":"rooms/rm_testbed/rm_testbed.yy",},
     {"name":"inst_484FCF55","path":"rooms/rm_testbed/rm_testbed.yy",},
-    {"name":"inst_322E702F","path":"rooms/rm_testbed/rm_testbed.yy",},
     {"name":"inst_59A64F50","path":"rooms/rm_testbed/rm_testbed.yy",},
     {"name":"inst_2D676635","path":"rooms/rm_testbed/rm_testbed.yy",},
     {"name":"inst_132AA013","path":"rooms/rm_testbed/rm_testbed.yy",},
     {"name":"inst_164317D3","path":"rooms/rm_testbed/rm_testbed.yy",},
     {"name":"inst_7AA097E4","path":"rooms/rm_testbed/rm_testbed.yy",},
     {"name":"inst_1252A6F0","path":"rooms/rm_testbed/rm_testbed.yy",},
+    {"name":"inst_565463DF","path":"rooms/rm_testbed/rm_testbed.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -39,7 +39,7 @@
         {"$GMRInstance":"v1","%Name":"inst_3214FF26","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3214FF26","objectId":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
         {"$GMRInstance":"v1","%Name":"inst_174E906E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_174E906E","objectId":{"name":"obj_audiomanager","path":"objects/obj_audiomanager/obj_audiomanager.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":0.0,},
         {"$GMRInstance":"v1","%Name":"inst_484FCF55","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_484FCF55","objectId":{"name":"obj_graphicmanager","path":"objects/obj_graphicmanager/obj_graphicmanager.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
-        {"$GMRInstance":"v1","%Name":"inst_322E702F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_322E702F","objectId":null,"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
+        {"$GMRInstance":"v1","%Name":"inst_565463DF","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_565463DF","objectId":{"name":"obj_globalmanager","path":"objects/obj_globalmanager/obj_globalmanager.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
       ],"layers":[],"name":"Core","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Entities","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_59A64F50","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_59A64F50","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":336.0,"y":203.0,},
