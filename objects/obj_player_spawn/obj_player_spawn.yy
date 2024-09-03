@@ -1,15 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_graphicmanager",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_player_spawn",
+  "eventList":[],
   "managed":true,
-  "name":"obj_graphicmanager",
+  "name":"obj_player_spawn",
   "overriddenProperties":[],
   "parent":{
-    "name":"Core",
-    "path":"folders/Objects/Core.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -29,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_player_spawn",
+    "path":"sprites/spr_player_spawn/spr_player_spawn.yy",
+  },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
