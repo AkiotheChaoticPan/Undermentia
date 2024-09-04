@@ -59,7 +59,6 @@
     {"id":{"name":"obj_fadein","path":"objects/obj_fadein/obj_fadein.yy",},},
     {"id":{"name":"obj_fadeout","path":"objects/obj_fadeout/obj_fadeout.yy",},},
     {"id":{"name":"obj_globalmanager","path":"objects/obj_globalmanager/obj_globalmanager.yy",},},
-    {"id":{"name":"obj_gm","path":"objects/obj_gm/obj_gm.yy",},},
     {"id":{"name":"obj_graphicmanager","path":"objects/obj_graphicmanager/obj_graphicmanager.yy",},},
     {"id":{"name":"obj_inv","path":"objects/obj_inv/obj_inv.yy",},},
     {"id":{"name":"obj_item_overworld","path":"objects/obj_item_overworld/obj_item_overworld.yy",},},

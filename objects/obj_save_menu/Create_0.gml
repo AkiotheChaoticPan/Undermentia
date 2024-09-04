@@ -30,7 +30,7 @@ option[1] = "Save"
 op_length = array_length(option)
 
 function save() {
-	obj_gm.save();
+	obj_globalmanager.save();
 }
 
 function _extract_seconds() {
