@@ -1,3 +1,5 @@
+save_time = 0;
+
 /// @description Attempts to load the game from an existing save file,
 /// if one doesn't exist then it will be created and the default room will be loaded
 /// @param {string} _default_room_override_str (optional) force it to load this room instead of the default room
@@ -17,8 +19,8 @@ load = function(_debug_room_override_str = "")
 			fill_in_empty_savedata()
 	
 			var _loaded_room = asset_get_index(ds_map_find_value(ds_map_find_value(global.savedata, "player"), "room"));
-			obj_player.x = ds_map_find_value(ds_map_find_value(global.savedata, "player"), "x")
-			obj_player.y = ds_map_find_value(ds_map_find_value(global.savedata, "player"), "y")
+			obj_player.x = ds_map_find_value(global.player_data, "x")
+			obj_player.y = ds_map_find_value(global.player_data, "y")
 			room_goto(_loaded_room);
 		}
 		// For now, failing to read it just makes us default to no save
@@ -49,7 +51,7 @@ save = function()
 	ds_map_replace(ds_map_find_value(global.savedata, "player"), "x", obj_player.x);
 	ds_map_replace(ds_map_find_value(global.savedata, "player"), "y", obj_player.y);
 	ds_map_replace(ds_map_find_value(global.savedata, "player"), "room", room_get_name(room));
-	ds_map_replace(ds_map_find_value(global.savedata, "player"), "time", ds_map_find_value(global.player_data, "time"));
+	ds_map_replace(ds_map_find_value(global.savedata, "player"), "time", get_total_game_time());
 	
 	var _save_contents = json_encode(global.savedata, false);
 	show_debug_message("Saved with values: {0}", _save_contents);
@@ -95,9 +97,38 @@ fill_in_empty_savedata = function()
 {
 	ds_map_add(global.player_data, "x", x)
 	ds_map_add(global.player_data, "y", y)
-	ds_map_add(global.player_data, "time", 0)
 	ds_map_add(global.player_data, "room", room_get_name(rm_testbed))
 	ds_map_add(global.player_data, "name", "CHARA")
 	ds_map_add(global.player_data, "exp", 0)
 	ds_map_add(global.player_data, "love", 0)
+	ds_map_add(global.player_data, "time", 0)
+}
+
+format_seconds = function(_seconds) {
+	var _minutes = _seconds div 60
+	var _hours = _minutes div 60
+	
+	var _minutes_text = "00"
+	var _hours_text = "00"
+	
+	if (_minutes > 0 && _minutes < 10) {
+		_minutes_text = string_concat("0", string(_minutes))
+	} else if (_minutes > 0) {
+		_minutes_text = string(_minutes)
+	}
+
+	if (_hours > 0 && _hours < 10) {
+		_hours_text = string_concat("0", string(_hours))
+	} else if (_hours > 0) {
+		_hours_text = string(_hours)
+	}
+	
+	return string_concat(_hours_text, ":", _minutes_text)
+}
+
+get_total_game_time = function()
+{
+	var prevTotal = ds_map_find_value(global.player_data, "time");
+	
+	return prevTotal + current_time;
 }

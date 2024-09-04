@@ -7,8 +7,8 @@ show_debug_message(content)
 
 global.full_room_names = json_decode(content)
 
-// Set current game time
-global.starting_time = current_time
+// Set game time
+global.start_game_time_ms = current_time;
 
 // Load save file (currently forced to load test room for debug purposes)
 load("rm_testbed");

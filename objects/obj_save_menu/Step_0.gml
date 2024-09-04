@@ -22,8 +22,6 @@ if (_confirm_key) {
 		option[1] = "Continue"
 		option[0] = ""
 		has_saved = true
-		save_time += _extract_seconds()
-		save_time_string = _format_seconds(save_time)
 		save()
 		audio_play_sound(snd_save, 1, false)
 	}
