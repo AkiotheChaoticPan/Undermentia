@@ -30,23 +30,7 @@ option[1] = "Save"
 op_length = array_length(option)
 
 function save() {
-	if file_exists("Save.sav"){
-		file_delete("Save.sav.bak");
-		file_copy("Save.sav", "Save.sav.bak")
-		file_delete("Save.sav");
-	}
-	
-	var _file = file_text_open_write("Save.sav");
-	
-	ds_map_replace(ds_map_find_value(global.savedata, "player"), "x", obj_player.x)
-	ds_map_replace(ds_map_find_value(global.savedata, "player"), "y", obj_player.y)
-	ds_map_replace(ds_map_find_value(global.savedata, "player"), "room", room_get_name(room))
-	ds_map_replace(ds_map_find_value(global.savedata, "player"), "time", save_time)
-	
-	var _save_contents = json_encode(global.savedata, false)
-	show_debug_message("Saved with values: {0}", _save_contents)
-	file_text_write_string(_file, _save_contents)
-	file_text_close(_file)
+	obj_gm.save();
 }
 
 function _extract_seconds() {

@@ -3,44 +3,59 @@
 /// if one doesn't exist then it will be created and the default room will be loaded
 /// @param {string} _default_room_override_str (optional) force it to load this room instead of the default room
 load = function(_debug_room_override_str = "")
-{
-	ini_open("Save.sav");
-	
-	var default_room_str = (_debug_room_override_str == "" ? "rm_default" : _debug_room_override_str);
-	var room_str = ini_read_string("Save1", "room", default_room_str);
-	obj_player.x = ini_read_real("Save1","x",0);
-	obj_player.y = ini_read_real("Save1","y",0);
-	
-	ini_close();
-	
-	var found_room_id = asset_get_index(room_str);
-	
-	// If the room isn't valid, make sure we load the default one
-	if (found_room_id == -1)
+{	
+	if file_exists("Save.sav") 
 	{
-		found_room_id = asset_get_index(default_room_str);
-	}
+		var _default_room = (_debug_room_override_str != "") ? "rm_default" : _debug_room_override_str;
+		var _file = file_text_open_read("Save.sav");
 	
-	room_goto(found_room_id);
+		try 
+		{
+			global.savedata = json_decode(file_text_read_string(_file))
+			global.progress = ds_map_find_value(global.savedata, "progress")
+			global.player_data = ds_map_find_value(global.savedata, "player")
+		
+			fill_in_empty_savedata()
+	
+			var _loaded_room = asset_get_index(ds_map_find_value(ds_map_find_value(global.savedata, "player"), "room"));
+			obj_player.x = ds_map_find_value(ds_map_find_value(global.savedata, "player"), "x")
+			obj_player.y = ds_map_find_value(ds_map_find_value(global.savedata, "player"), "y")
+			room_goto(_loaded_room);
+		}
+		// For now, failing to read it just makes us default to no save
+		catch (_exception) 
+		{
+			create_empty_savedata()
+			show_debug_message(_exception.message)
+			room_goto(asset_get_index(_default_room));
+		}
+	}
+	else 
+	{
+		create_empty_savedata()
+	}
 }
 
-/// @description Saves to an existing file or creates a new file and writes to it
-/// if one doesn't already exist
+/// @description Saves to an existing file or creates a new file and writes to it if one doesn't already exist
 save = function()
 {
-	if file_exists("Save.sav")
-	{
-		file_delete("Save.sav");	
+	if file_exists("Save.sav"){
+		file_delete("Save.sav.bak");
+		file_copy("Save.sav", "Save.sav.bak")
+		file_delete("Save.sav");
 	}
 	
-	ini_open("Save.sav");
-	ini_write_string("Save1","room", room_get_name(room))
-	ini_write_real("Save1","x",obj_player.x);
-	ini_write_real("Save1","y",obj_player.y)
+	var _file = file_text_open_write("Save.sav");
 	
-	show_debug_message("[DEBUG] Saved with values: {0}, {1}, {2}", room_get_name(room), obj_player.x, obj_player.y)
+	ds_map_replace(ds_map_find_value(global.savedata, "player"), "x", obj_player.x);
+	ds_map_replace(ds_map_find_value(global.savedata, "player"), "y", obj_player.y);
+	ds_map_replace(ds_map_find_value(global.savedata, "player"), "room", room_get_name(room));
+	ds_map_replace(ds_map_find_value(global.savedata, "player"), "time", ds_map_find_value(global.player_data, "time"));
 	
-	ini_close();
+	var _save_contents = json_encode(global.savedata, false);
+	show_debug_message("Saved with values: {0}", _save_contents);
+	file_text_write_string(_file, _save_contents);
+	file_text_close(_file);
 }
 
 /// @description Sets the player position to one on the collision map if they aren't on one already
@@ -65,4 +80,25 @@ move_player_to_safe_pos = function()
 		
 		show_debug_message($"[DEBUG] Moved player to new safe position, now at: {obj_player.x}, {obj_player.y} from {old_x}, {old_y}");
 	}
+}
+
+create_empty_savedata = function() 
+{
+	global.savedata = ds_map_create();   // This is the full savedata, careful with access here
+	global.progress = ds_map_create();   // This is specifically for any extra storage, go wild
+	global.player_data =  ds_map_create();  // Situation-agnostic player data.
+	ds_map_add_map(global.savedata, "player", global.player_data)
+	ds_map_add_map(global.savedata, "progress",  global.progress)
+	fill_in_empty_savedata()
+}
+
+fill_in_empty_savedata = function() 
+{
+	ds_map_add(global.player_data, "x", x)
+	ds_map_add(global.player_data, "y", y)
+	ds_map_add(global.player_data, "time", 0)
+	ds_map_add(global.player_data, "room", room_get_name(rm_testbed))
+	ds_map_add(global.player_data, "name", "CHARA")
+	ds_map_add(global.player_data, "exp", 0)
+	ds_map_add(global.player_data, "love", 0)
 }
