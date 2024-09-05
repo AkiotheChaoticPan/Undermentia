@@ -1,11 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_savelocation",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_player_spawn",
+  "eventList":[],
   "managed":true,
-  "name":"obj_savelocation",
+  "name":"obj_player_spawn",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -30,9 +28,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_savelocation",
-    "path":"sprites/spr_savelocation/spr_savelocation.yy",
+    "name":"spr_player_spawn",
+    "path":"sprites/spr_player_spawn/spr_player_spawn.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
