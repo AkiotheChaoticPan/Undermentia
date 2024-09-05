@@ -11,13 +11,13 @@ function display_dialogue(_num){
 	instance.play = dialogue.play;
 	instance.sound = dialogue.sound;
 	instance.loop = dialogue.loop;
-	instance.character = dialogue.character;
-	instance.emotion = dialogue.emotion;
+	instance.characters = dialogue.characters;
+	instance.emotions = dialogue.emotions;
 	instance.text_lenght = string_length(dialogue.text);
 	instance.options[0] = dialogue.option1;
 	instance.options[1] = dialogue.option2;
 	instance.auto = dialogue.auto;
-	instance.voice = dialogue.voice;
+	instance.voices = dialogue.voices;
 	instance.colors = dialogue.colors;
 	instance.effects = dialogue.effects;
 }
@@ -34,13 +34,14 @@ function display_dialogue_textbox(_num, _textbox){
 	_textbox.play = dialogue.play;
 	_textbox.sound = dialogue.sound;
 	_textbox.loop = dialogue.loop;
-	_textbox.character = dialogue.character;
-	_textbox.emotion = dialogue.emotion;
+	show_debug_message(dialogue);
+	_textbox.characters = dialogue.characters;
+	_textbox.emotions = dialogue.emotions;
 	_textbox.text_lenght = string_length(dialogue.text);
 	_textbox.options[0] = dialogue.option1;
 	_textbox.options[1] = dialogue.option2;
 	_textbox.auto = dialogue.auto;
-	_textbox.voice = dialogue.voice;
+	_textbox.voices = dialogue.voices;
 	_textbox.colors = dialogue.colors;
 	_textbox.effects = dialogue.effects;
 }

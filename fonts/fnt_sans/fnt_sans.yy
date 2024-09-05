@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"fnt_testfont",
+  "%Name":"fnt_sans",
   "AntiAlias":0,
   "applyKerning":0,
   "ascender":17,
@@ -117,7 +117,7 @@
   "last":0,
   "lineHeight":22,
   "maintainGms1Font":false,
-  "name":"fnt_testfont",
+  "name":"fnt_sans",
   "parent":{
     "name":"Fonts",
     "path":"folders/Fonts.yy",

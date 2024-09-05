@@ -19,7 +19,7 @@ if (keyboard_check(vk_tab)) {
 }
 
 if (keyboard_check_pressed(ord("A"))) {
-	display_dialogue(1);
+	display_dialogue(0);
 }
 
 // Set Direction & Get Animation

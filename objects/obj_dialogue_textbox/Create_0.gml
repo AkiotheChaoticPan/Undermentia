@@ -13,7 +13,7 @@ margin_x = 10;
 margin_y = 8;
 line_separation = 20;
 text_speed = 0.7;
-font = fnt_testfont;
+font = fnt_sans;
 next = undefined;
 item = undefined;
 play = undefined;
@@ -27,29 +27,33 @@ colors[0] = {
 	start : 0,
 	end_pos : 999
 };
-color_char[0] = #ffffff;
+color_char[0, 0] = #ffffff;
 
 effects[0] = {
 	effect : "",
 	start : 0,
 	end_pos : 0
 };
-effect_char[0] = [];
-effect_char_params[0] = [];
+effect_char[0, 0] = [];
+effect_char_params[0, 0] = [];
 
+page = 0;
 text_index = 0;
 text = "* If you're reading this, something went wrong. Please reset your game.";
+texts = [];
 text_lenght = 0;
-chars[0] = "";
-char_x[0] = 0;
-char_y[0] = 0;
-character = undefined;
-emotion = 0;
-line_break[0] = 999;
-break_num = 0;
+text_lenghts[0] = 0;
+chars[0, 0] = "";
+char_x[0, 0] = 0;
+char_y[0, 0] = 0;
+characters = [];
+emotions = [];
+line_breaks[0, 0] = 999;
+break_nums[0] = 0;
 break_offset = 0;
 last_free_space = 0;
 setup = false;
+num_pages = 0;
 
 snd_delay = 3;
 snd_count = snd_delay;

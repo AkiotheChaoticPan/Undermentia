@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sfx_talk_flowey",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":1,
+  "duration":0.269229,
+  "name":"sfx_talk_flowey",
+  "parent":{
+    "name":"SFX",
+    "path":"folders/Sounds/SFX.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_talk_flowey.ogg",
+  "type":0,
+  "volume":1.0,
+}
