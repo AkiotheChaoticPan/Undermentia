@@ -57,3 +57,7 @@ num_pages = 0;
 
 snd_delay = 3;
 snd_count = snd_delay;
+
+if(object_exists(obj_player)) {
+	obj_player.can_move = false;
+}

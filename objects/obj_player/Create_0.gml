@@ -1,5 +1,6 @@
 #region Movement & Collision 
 
+can_move = true;
 movement_speed = 100;
 is_moving = false;
 dir = 0; 

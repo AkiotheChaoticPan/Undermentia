@@ -120,6 +120,9 @@ if(text_index < text_lenghts[page] && txt_timer <= 0) {
 		}
 		if(next == undefined) {
 			if(options[0] == undefined) {
+				if(object_exists(obj_player)) {
+					obj_player.can_move = true;
+				}
 				instance_destroy();
 			} else {
 				text_index = 0;
