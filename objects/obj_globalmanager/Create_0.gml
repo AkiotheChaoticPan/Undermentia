@@ -1,4 +1,5 @@
 save_time = 0;
+target_entrance = undefined;
 
 /// @description Attempts to load the game from an existing save file,
 /// if one doesn't exist then it will be created and the default room will be loaded

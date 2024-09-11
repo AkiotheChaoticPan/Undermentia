@@ -81,6 +81,7 @@
     {"id":{"name":"item_functions","path":"scripts/item_functions/item_functions.yy",},},
     {"id":{"name":"scr_anim_bind","path":"scripts/scr_anim_bind/scr_anim_bind.yy",},},
     {"id":{"name":"scr_mappable_controls","path":"scripts/scr_mappable_controls/scr_mappable_controls.yy",},},
+    {"id":{"name":"utility","path":"scripts/utility/utility.yy",},},
     {"id":{"name":"bgm_ruins","path":"sounds/bgm_ruins/bgm_ruins.yy",},},
     {"id":{"name":"snd_bip","path":"sounds/snd_bip/snd_bip.yy",},},
     {"id":{"name":"snd_heal","path":"sounds/snd_heal/snd_heal.yy",},},
