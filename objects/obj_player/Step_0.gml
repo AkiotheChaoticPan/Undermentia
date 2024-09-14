@@ -33,3 +33,27 @@ if (_move_x != 0) {
 }
 
 #endregion
+
+#region Interacting
+function can_interact() {
+	//TODO: Add checking conditions for interacting with objects (is in dialogue, etc...)
+	return true;
+}
+var _x_offset = _move_x * collided_length;
+var _y_offset = _x_offset != 0 ? 0 : _move_y * collided_length;
+
+if(_x_offset == 0 && _y_offset == 0) {
+	_x_offset = last_x_offset;
+	_y_offset = last_y_offset;
+}
+
+last_x_offset = _x_offset;
+last_y_offset = _y_offset;
+
+show_debug_message(last_x_offset, last_y_offset);
+
+var _interactable_instance = collision_line(x, y, x + _x_offset, y + _y_offset, obj_trigger_interactable, false, true);
+if(can_interact() && _interactable_instance && check_confirm_pressed()) {
+	with(_interactable_instance){event_user(0);};
+}
+#endregion

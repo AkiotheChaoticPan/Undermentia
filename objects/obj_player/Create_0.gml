@@ -46,3 +46,7 @@ get_animation("down");
 
 #endregion
 
+#region interacting
+last_x_offset = 0
+last_y_offset = 1 * collided_length
+#endregion
