@@ -1,5 +1,65 @@
 global.dialogues = [
 	{
+		text : "It’s Toriel's diary.//read the circled passage?",
+		font : fnt_default,
+		txt_speed : 0.7,
+		next : undefined,
+		item : undefined,
+		play : false,
+		sound : undefined,
+		loop : undefined,
+		characters : [undefined, undefined],
+		emotions : [],
+		option1 : {
+			text : "Yes",
+			next : 1
+		},
+		option2 : {
+			text : "No",
+			next : 2
+		},
+		auto : false,
+		voices : [sfx_talk_def, sfx_talk_def],
+		colors : [],
+		effects : []
+	},
+	{
+		text : "You read the passage one. “Why did the skeleton want a friend? Because she was feeling BONELY!” The rest of the diary is filled with jokes with the same caliber",
+		font : fnt_default,
+		txt_speed : 0.7,
+		next : undefined,
+		item : undefined,
+		play : false,
+		sound : undefined,
+		loop : undefined,
+		characters : [undefined],
+		emotions : [],
+		option1 : undefined,
+		option2 : undefined,
+		auto : false,
+		voices : [sfx_talk_def],
+		colors : [],
+		effects : []
+	},
+	{
+		text : "",
+		font : fnt_default,
+		txt_speed : 0.7,
+		next : undefined,
+		item : undefined,
+		play : false,
+		sound : undefined,
+		loop : undefined,
+		characters : [undefined],
+		emotions : [],
+		option1 : undefined,
+		option2 : undefined,
+		auto : true,
+		voices : [sfx_talk_def],
+		colors : [],
+		effects : []
+	},
+	{
 		text : "Howdy! I'm Flowey. Flowey the Flower!//You're new to the underground, aren't cha?//Golly, you must be so confused.//Someone better teach you how things work around here.//I guess little old me will have to do.//Ready? Here we go!",
 		font : fnt_default,
 		txt_speed : 0.7,

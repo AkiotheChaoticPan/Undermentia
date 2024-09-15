@@ -18,10 +18,6 @@ if (keyboard_check(vk_tab)) {
 	fade_screen(1, #ffffff, 0.5);	
 }
 
-if (keyboard_check_pressed(ord("A"))) {
-	display_dialogue(0);
-}
-
 // Set Direction & Get Animation
 if (_move_x != 0 && can_move) {
 	is_moving = true;
@@ -40,8 +36,8 @@ if (_move_x != 0 && can_move) {
 
 #region Interacting
 function can_interact() {
-	//TODO: Add checking conditions for interacting with objects (is in dialogue, etc...)
-	return true;
+	//TODO: Add checking conditions for interacting with objects (is in dialogue, etc...)	
+	return !in_dialogue;
 }
 var _x_offset = _move_x * collided_length;
 var _y_offset = _x_offset != 0 ? 0 : _move_y * collided_length;

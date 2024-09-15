@@ -121,6 +121,7 @@ if(text_index < text_lenghts[page] && txt_timer <= 0) {
 		if(next == undefined) {
 			if(options[0] == undefined) {
 				if(object_exists(obj_player)) {
+					obj_player.in_dialogue = false;
 					obj_player.can_move = true;
 				}
 				instance_destroy();
@@ -171,7 +172,7 @@ if(characters[page] != undefined) {
 	draw_sprite(characters[page], emotions[page], x - (background_width / 2) + margin_x, y - (background_height / 2) + margin_y);
 }
 
-if(options[0] != undefined && text_index == text_lenghts[page] && page == num_pages - 1) {
+if(options[0] != undefined && text_index == text_lenghts[page] && page >= num_pages) {
 	var _col0 = option == 0 ? c_yellow : c_white;
 	var _col1 = option == 1 ? c_yellow : c_white;
 	var _x_soul_offset = option == 0 ? 0 : (background_width / 2) + 20;

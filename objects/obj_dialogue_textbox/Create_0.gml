@@ -60,4 +60,5 @@ snd_count = snd_delay;
 
 if(object_exists(obj_player)) {
 	obj_player.can_move = false;
+	obj_player.in_dialogue = true;
 }
