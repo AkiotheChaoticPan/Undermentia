@@ -1,15 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_trigger_interactable",
+  "%Name":"obj_graphicmanager",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_trigger_interactable",
+  "name":"obj_graphicmanager",
   "overriddenProperties":[],
   "parent":{
-    "name":"Triggers",
-    "path":"folders/Objects/Triggers.yy",
+    "name":"Core",
+    "path":"folders/Objects/Core.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -29,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_trigger_interactable",
-    "path":"sprites/spr_trigger_interactable/spr_trigger_interactable.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

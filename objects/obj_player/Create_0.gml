@@ -36,6 +36,9 @@ if file_exists("Save.sav") {
 sprite_index = spr_player;
 image_index = 0;
 
+animation_frames = []
+animation_speed = 0
+
 animations = {
 	down:	{ frames: [ 0, 3 ], speed: 6 },
 	left:	{ frames: [ 4, 5 ], speed: 6 },
@@ -57,3 +60,7 @@ get_animation("down");
 
 #endregion
 
+#region interacting
+last_x_offset = 0
+last_y_offset = 1 * collided_length
+#endregion

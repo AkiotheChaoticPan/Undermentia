@@ -1,15 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_trigger_interactable",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_player_spawn",
+  "eventList":[],
   "managed":true,
-  "name":"obj_trigger_interactable",
+  "name":"obj_player_spawn",
   "overriddenProperties":[],
   "parent":{
-    "name":"Triggers",
-    "path":"folders/Objects/Triggers.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,9 +28,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_trigger_interactable",
-    "path":"sprites/spr_trigger_interactable/spr_trigger_interactable.yy",
+    "name":"spr_player_spawn",
+    "path":"sprites/spr_player_spawn/spr_player_spawn.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
