@@ -7,10 +7,10 @@ var _move_y = keyboard_check(vk_down) - keyboard_check(vk_up);
 var _new_x = x + (_move_x * movement_speed * _delta);
 var _new_y = y + (_move_y * movement_speed * _delta);
 
-
-// stops player from moving when menu is open
-if (global.menu_open) {
+// stops player from moving in a cutscene
+if (in_cutscene) {
 	is_moving = false;
+	image_index = animation_frames[0]; // Sets the appropriate idle animation
 	return;
 }
 
