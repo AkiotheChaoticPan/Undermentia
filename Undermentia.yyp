@@ -46,7 +46,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.6.2.162",
+    "IDEVersion":"2024.11.0.179",
   },
   "name":"Undermentia",
   "resources":[
@@ -64,6 +64,7 @@
     {"id":{"name":"obj_item_overworld","path":"objects/obj_item_overworld/obj_item_overworld.yy",},},
     {"id":{"name":"obj_menu","path":"objects/obj_menu/obj_menu.yy",},},
     {"id":{"name":"obj_mini_menu","path":"objects/obj_mini_menu/obj_mini_menu.yy",},},
+    {"id":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},},
     {"id":{"name":"obj_player_spawn","path":"objects/obj_player_spawn/obj_player_spawn.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_save_menu","path":"objects/obj_save_menu/obj_save_menu.yy",},},
