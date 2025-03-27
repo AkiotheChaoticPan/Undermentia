@@ -1,0 +1,2 @@
+Test2;<shake 1><font fnt_sans 0.5>It tests the function of the dialogue system.</shake>; 1;fnt_undertale;undefined;false;CRLF
+Test;<portrait spr_port_flour 1><color #FF0000><font fnt_papyrus 2>This //is a testing piece of dialogue///................;0.3;fnt_undertale;test2;false;CRLF

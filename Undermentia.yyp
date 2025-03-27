@@ -43,9 +43,9 @@
   ],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"DTM-Mono.otf","CopyToMask":-1,"filePath":"datafiles","name":"DTM-Mono.otf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-    {"$GMIncludedFile":"","%Name":"en-us.csv","CopyToMask":-1,"filePath":"datafiles","name":"en-us.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"en-us.txt","CopyToMask":-1,"filePath":"datafiles","name":"en-us.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"full_room_names.json","CopyToMask":-1,"filePath":"datafiles","name":"full_room_names.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-    {"$GMIncludedFile":"","%Name":"testing.csv","CopyToMask":-1,"filePath":"datafiles","name":"testing.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"testing.txt","CopyToMask":-1,"filePath":"datafiles","name":"testing.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
   "LibraryEmitters":[],
