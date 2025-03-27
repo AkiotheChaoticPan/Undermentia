@@ -361,11 +361,11 @@ for(var _c = 0; _c < min(text_index, text_lenghts[page]); _c++) {
 			}
 			if(array_contains(effect_char[text_index - 1, page], "textbox")) {
 				image_index = effect_char_params[text_index - 1, page].textbox[0];
-				if(effect_char_params[text_index - 1, page].textbox[1] != undefined) {
+				if(array_length(effect_char_params[text_index - 1, page].textbox) > 1) {
 					pos_x = effect_char_params[text_index - 1, page].textbox[1];
 					pos_y = effect_char_params[text_index - 1, page].textbox[2];
 				}
-				if(effect_char_params[text_index - 1, page].textbox[3] != undefined) {
+				if(array_length(effect_char_params[text_index - 1, page].textbox) > 3) {
 					background_width = effect_char_params[text_index - 1, page].textbox[3];
 					background_height = effect_char_params[text_index - 1, page].textbox[4];
 				}

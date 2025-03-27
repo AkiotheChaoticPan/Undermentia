@@ -1,6 +1,7 @@
 if(room == rm_title) {
 	show_debug_message(image_index);
 	if(image_index < frame_count && !alarm_is_set) {
+		dialogue_textbox.script_advance();
 		alarm_set(0, 300);
 		alarm_is_set = true;
 	}
@@ -13,6 +14,7 @@ if(room == rm_title) {
 			alarm[1] = -1;
 			audio_stop_all();
 		} else {
+			instance_destroy(dialogue_textbox);
 			room_goto(rm_testbed);
 		}
 	}
