@@ -1,0 +1,6 @@
+{
+  "FolderOrderSettings":[],
+  "ResourceOrderSettings":[
+    {"name":"obj_npc","order":1,"path":"objects/obj_npc/obj_npc.yy",},
+  ],
+}

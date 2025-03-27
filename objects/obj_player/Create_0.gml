@@ -25,6 +25,7 @@ eq_weap = global.item_list.stick.name; // equipped weapon name
 can_player_interact = true
 movement_speed = 100;
 is_moving = false;
+in_cutscene = false;
 dir = 0; 
 enum DIRECTION {
 	DOWN,

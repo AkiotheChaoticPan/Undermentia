@@ -5,3 +5,7 @@
  *
  * Instanced variables let each cutscene trigger have their own line length and rotation.
  */
+
+// why do that when you can just use flags and move the trigger around
+
+timer = -1
