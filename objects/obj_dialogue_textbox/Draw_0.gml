@@ -205,10 +205,25 @@ if(!setup) {
 		set_letter_positions(_page);
 	}
 }
+
+can_script_advance = false;
+can_script_skip = false;
+for(var _i = 0; _i < array_length(script_control_stack); _i++) {
+	switch(script_control_stack[_i]) {
+		case "advance":
+			can_script_advance = true;
+			break;
+		case "skip":
+			can_script_skip = true;
+			break;
+	}
+}
+script_control_stack = [];
+
 if(timer > current_time) {
-	
+	//just waiting
 } else if(text_index < text_lenghts[page] && txt_timer <= 0) {
-	text_index = check_return_pressed() ? text_lenghts[page] : text_index + text_speed;
+	text_index = (check_return_pressed() && (!script_controlled)) || (script_controlled && can_script_skip) ? text_lenghts[page] : text_index + text_speed;
 	text_index = clamp(text_index, 0, text_lenghts[page]);
 	
 	if(snd_count < snd_delay) {
@@ -224,9 +239,9 @@ if(timer > current_time) {
 		txt_timer = txt_wait_time;
 	}
 } else if(text_index < text_lenghts[page] && txt_timer > 0) {
-	text_index = check_return_pressed() ? text_lenghts[page] : text_index;
+	text_index = (check_return_pressed() && (!script_controlled)) || (script_controlled && can_script_skip) ? text_lenghts[page] : text_index;
 	txt_timer--;
-} else if(check_confirm_pressed() || auto) {
+} else if((check_confirm_pressed() && !script_controlled) || (can_script_advance && script_controlled) || auto) {
 	if(page >= num_pages) {
 		if(next == undefined) {
 			if(array_length(options) <= 0) {
@@ -254,7 +269,7 @@ if(timer > current_time) {
 				page = 0;
 				effects = [];
 				colors = [];
-				display_dialogue_textbox(options[option].next, self, caller);
+				display_dialogue_textbox(options[option].next, self, script_controlled, caller);
 				options = [];
 			}
 		} else {
@@ -271,7 +286,7 @@ if(timer > current_time) {
 			page = 0;
 			effects = [];
 			colors = [];
-			display_dialogue_textbox(next, self, caller);
+			display_dialogue_textbox(next, self, script_controlled, caller);
 			options = [];
 		}
 	} else {

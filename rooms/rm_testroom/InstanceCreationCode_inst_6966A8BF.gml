@@ -1,3 +1,3 @@
 function interact() {
-	display_dialogue("toriel_room_diary", self);
+	display_dialogue("toriel_room_diary", false, self);
 }

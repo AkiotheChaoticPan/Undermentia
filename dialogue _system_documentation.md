@@ -1,6 +1,6 @@
 # DIALOGUE SYSTEM DOCUMENTATION
 
-This is a detailed explanation of the dialogue system used by this project. The system works on basis of a CSV file containing all the dialogue information needed. To access this information, use function ```get_dialogue_csv(string: dialogue_id)``` which returns a struct consisting of: ```string: text, real: txt_speed, string: next, bool: auto, instanceId: font```. To create a dialogue textbox with a selected text, use the function ```display_dialogue(string: dialogue_id, opt. InstanceId: creator_id)```. To reuse a dialogue textbox with a selected text, use the function ```display_dialogue_textbox(string: dialogue_id, instanceId: textbox_id, opt. InstanceId: creator_id)```. The creator id is used to send events(e.g. Dialogue options selection, custom event, etc.) back to the creating instance. You can also use a raw dialogue struct instead of the dialogue_id.
+This is a detailed explanation of the dialogue system used by this project. The system works on basis of a CSV file containing all the dialogue information needed. To access this information, use function ```get_dialogue_csv(string: dialogue_id)``` which returns a struct consisting of: ```string: text, real: txt_speed, string: next, bool: auto, instanceId: font```. To create a dialogue textbox with a selected text, use the function ```display_dialogue(string: dialogue_id, opt. bool: is_script_controlled, opt. InstanceId: creator_id)```. To reuse a dialogue textbox with a selected text, use the function ```display_dialogue_textbox(string: dialogue_id, instanceId: textbox_id, opt. bool: is_script_controlled, opt. InstanceId: creator_id)```. Both display_dialogue function versions return the instance_id of the textbox. The creator id is used to send events(e.g. Dialogue options selection, custom event, etc.) back to the creating instance. You can also use a raw dialogue struct instead of the dialogue_id. The is_script_controlled parameter is used to specify, whether the script is responsible for advancing the dialogue, or the player. Use function ```[textbox_instance].script_skip();``` to skip the dialogue, or the function ```[textbox_instance].script_advance();``` to advance the dialogue.
 To create a new dialogue page(same textbox, but a new dialogue), use `///`, and to force a new line, use `//`.
 
 ## Tags
@@ -13,7 +13,7 @@ Most of the formatting is done by tags. Tags work like in the html language, bei
 
 This tag alters the color of the text within the tag.
 
-Parameters - the color of the text in hex format(#RRGGBB)
+Parameters - the color of the text in hex format(```#RRGGBB```)
 
 #### portrait
 

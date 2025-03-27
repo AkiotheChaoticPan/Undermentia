@@ -66,6 +66,19 @@ num_pages = 0;
 snd_delay = 3;
 snd_count = snd_delay;
 
+script_controlled = false;
+script_control_stack = [];
+can_script_advance = false;
+can_script_skip = false;
+
+function script_advance() {
+	array_insert(script_control_stack, array_length(script_control_stack), "advance");
+}
+
+function script_skip() {
+	array_insert(script_control_stack, array_length(script_control_stack), "skip");
+}
+
 global.in_dialogue = true;
 
 tag_stack = [];
