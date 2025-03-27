@@ -1,6 +1,6 @@
 /// @param dialogue_id
 /// @description Creates a new instance of a dialogue box
-function display_dialogue(_id, _script_controlled = false, _caller_instance = undefined) {
+function display_dialogue(_id,  _caller_instance = undefined, _script_controlled = false) {
 	if(is_string(_id)) {
 		dialogue = get_dialogue_csv(_id);
 	} else {
@@ -20,7 +20,7 @@ function display_dialogue(_id, _script_controlled = false, _caller_instance = un
 
 /// @param dialogue textbox_instance
 /// @description Adds a new dialogue into an existing dialogue box
-function display_dialogue_textbox(_num, _textbox, _script_controlled = false, _caller_instance = undefined) {
+function display_dialogue_textbox(_num, _textbox, _caller_instance = undefined, _script_controlled = false) {
 	if(is_string(_num)) {
 		dialogue = get_dialogue_csv(_num);
 	} else {

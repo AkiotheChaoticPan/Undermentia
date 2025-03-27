@@ -269,7 +269,7 @@ if(timer > current_time) {
 				page = 0;
 				effects = [];
 				colors = [];
-				display_dialogue_textbox(options[option].next, self, script_controlled, caller);
+				display_dialogue_textbox(options[option].next, self, caller, script_controlled);
 				options = [];
 			}
 		} else {
@@ -286,7 +286,7 @@ if(timer > current_time) {
 			page = 0;
 			effects = [];
 			colors = [];
-			display_dialogue_textbox(next, self, script_controlled, caller);
+			display_dialogue_textbox(next, self, caller, script_controlled);
 			options = [];
 		}
 	} else {
