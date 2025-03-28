@@ -1,22 +1,24 @@
 global.cell = false;
 global.stats = false;
+global.inv_open = false;
 
 obj_cell.visible = false;
 obj_stat.visible = false;
 
 // creating inventory
-inv = array_create(0);
+inv = [];
 
 last_select = 0;
 select_item = -1;
 select_op = 0;
 
-inv_length = array_length(inv);
+
 inv_border = 12;
 inv_space = 16;
 
 inv_max = 10;
 
+op_pos = false;
 pos = 0;
 
 w = 0;
