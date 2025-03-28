@@ -2,7 +2,7 @@
 cam_width = 640;
 cam_height = 360; // UNDERTALE is 640x480 (4:3) but I'd personally like to shoot for a 16:9 ratio
 cam_focus = obj_player;
-cam_follow_lerp = 4; // Smoothness of camera tracking (0 = off)
+cam_follow_lerp = 0; // Smoothness of camera tracking (0 = off)
 
 // Create the Camera View
 global.camera = camera_create_view(cam_focus.x, cam_focus.y, cam_width, cam_height);

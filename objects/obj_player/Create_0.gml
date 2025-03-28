@@ -1,3 +1,10 @@
+
+global.in_dialogue = false;
+
+#region Movement & Collision 
+
+can_move = true;
+
 name = "YAY";
 lv = 1;
 max_hp = 20;
@@ -20,6 +27,7 @@ eq_weap = global.item_list.stick.name; // equipped weapon name
 can_player_interact = true
 movement_speed = 100;
 is_moving = false;
+in_cutscene = false;
 dir = 0; 
 enum DIRECTION {
 	DOWN,
@@ -62,3 +70,10 @@ function get_animation(_state) {
 get_animation("down");
 
 #endregion
+
+
+#region interacting
+last_x_offset = 0;
+last_y_offset = 1 * collided_length;
+#endregion
+

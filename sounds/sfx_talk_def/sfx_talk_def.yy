@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sfx_talk_def",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.411769,
+  "name":"sfx_talk_def",
+  "parent":{
+    "name":"SFX",
+    "path":"folders/Sounds/SFX.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_talk_def.wav",
+  "type":0,
+  "volume":1.0,
+}

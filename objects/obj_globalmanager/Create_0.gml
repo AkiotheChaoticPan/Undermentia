@@ -102,6 +102,11 @@ fill_in_empty_savedata = function()
 	ds_map_add(global.player_data, "exp", 0)
 	ds_map_add(global.player_data, "love", 0)
 	ds_map_add(global.player_data, "time", 0)
+
+	for(var i=1; i < 100; i += 1;) {
+		ds_map_add(global.progress, string_concat("flag", string(i)), false)
+	}
+
 }
 
 format_seconds = function(_seconds) {
