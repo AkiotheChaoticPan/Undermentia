@@ -6,11 +6,11 @@
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_E96D3BF_1","path":"rooms/rm_testroom/rm_testroom.yy",},
-    {"name":"inst_693F7827_1","path":"rooms/rm_testroom/rm_testroom.yy",},
-    {"name":"inst_3214FF26_2","path":"rooms/rm_testroom/rm_testroom.yy",},
-    {"name":"inst_174E906E_2","path":"rooms/rm_testroom/rm_testroom.yy",},
-    {"name":"inst_484FCF55_1","path":"rooms/rm_testroom/rm_testroom.yy",},
+    {"name":"inst_E96D3BF_1","path":"rooms/rm_testroom/rm_testroom.yy"},
+    {"name":"inst_693F7827_1","path":"rooms/rm_testroom/rm_testroom.yy"},
+    {"name":"inst_3214FF26_2","path":"rooms/rm_testroom/rm_testroom.yy"},
+    {"name":"inst_174E906E_2","path":"rooms/rm_testroom/rm_testroom.yy"},
+    {"name":"inst_484FCF55_1","path":"rooms/rm_testroom/rm_testroom.yy"},
 
   ],
   "isDnd":false,
