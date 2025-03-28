@@ -1,8 +1,10 @@
+
 global.in_dialogue = false;
 
 #region Movement & Collision 
 
 can_move = true;
+
 name = "YAY";
 lv = 1;
 max_hp = 20;
@@ -69,7 +71,9 @@ get_animation("down");
 
 #endregion
 
+
 #region interacting
 last_x_offset = 0;
 last_y_offset = 1 * collided_length;
 #endregion
+
