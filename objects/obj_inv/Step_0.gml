@@ -1,10 +1,13 @@
-if (global.menu_open && visible) {
+// inv_length = 
+if (global.inv_open && visible) {
 
     var _up_k = keyboard_check_pressed(vk_up);
     var _down_k = keyboard_check_pressed(vk_down);
     var _right_k = keyboard_check_pressed(vk_right);
     var _left_k = keyboard_check_pressed(vk_left);
     var _accept = keyboard_check_pressed(vk_enter);
+	
+	
 
     if (!sec_op) {
         pos += _down_k - _up_k;
@@ -62,15 +65,20 @@ if (global.menu_open && visible) {
         } 
 		else {
             switch(sec_pos) {
-				case 0:
+				case 0: // use
 					// create dialogue box
+					//array_resize(inv, array_length(inv) + 1);
 					inv[select_item].effect();
+					inv = array_delete(inv, select_item, 1);
+					// array_resize(inv, array_length(inv) + 1);
 					keyboard_key_press(ord("Z"));
+					
 					break;
-				case 1:
+				case 1: // info
 					// create a dialogue box
 					break;
-				case 2:
+				case 2: // drop
+					keyboard_key_press(ord("Z"));
 					array_delete(inv, select_item, 1);
 					// create dialogue box
 					break;
