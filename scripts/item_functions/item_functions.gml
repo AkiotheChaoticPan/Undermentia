@@ -6,7 +6,7 @@ function inv_add(_item){
 	if (array_length(obj_inv.inv) < obj_inv.inv_max) {
 		array_push(obj_inv.inv, _item);
 	}
-	
+	//show_debug_message("item added");
 	
 }
 
@@ -27,14 +27,14 @@ global.item_list = {
 	stick : new create_item("Stick", 
 	"Its bark is worse than its bite.",
 	function() {
-		/*if (obj_player.weap) {
+		if (obj_player.weap) {
 			inv_add(obj_player.eq_weap)
 		}
 		obj_player.weap = true;
 		obj_player.atk_amp = 1;
-		obj_player.eq_weap = stick.name;
+		obj_player.eq_weap = global.item_list.stick.name;
 
-	*/}
+	}
 	
 	), 		
 	

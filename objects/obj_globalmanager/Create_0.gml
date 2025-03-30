@@ -3,11 +3,11 @@ save_time = 0;
 /// @description Attempts to load the game from an existing save file,
 /// if one doesn't exist then it will be created and the default room will be loaded
 /// @param {string} _default_room_override_str (optional) force it to load this room instead of the default room
-load = function(_debug_room_override_str = "")
+load = function(_default_room_override_str = "")
 {	
 	if file_exists("Save.sav") 
 	{
-		var _default_room = (_debug_room_override_str != "") ? "rm_default" : _debug_room_override_str;
+		var _default_room = (_default_room_override_str != "") ? "rm_default" : _default_room_override_str;
 		var _file = file_text_open_read("Save.sav");
 	
 		try 

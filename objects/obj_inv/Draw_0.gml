@@ -38,7 +38,7 @@ for (var _i = 0; _i < array_length(inv); _i++) {
     }
 
 // print inventory item names to screen
-	draw_sprite_ext(spr_soul, 0, soul_x, soul_y, 0.09, 0.09, 0, c_white, 1);
+	
 	
 	if (array_length(inv) == 0) {
 		break;
@@ -46,8 +46,10 @@ for (var _i = 0; _i < array_length(inv); _i++) {
 	else {
 		for (var _j = 0; _j < array_length(inv); _j++) {
 			if (inv[_j] != undefined && inv[_j].name != undefined) {
+				draw_sprite_ext(spr_soul, 0, soul_x, soul_y, 0.09, 0.09, 0, c_white, 1);
 				draw_text_color(x + inv_border, y + inv_border + inv_space * _j, inv[_j].name, _c, _c, _c, _c, 1);
 			}
+		
 		}
 }
 

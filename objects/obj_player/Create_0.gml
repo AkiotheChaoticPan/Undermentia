@@ -17,10 +17,12 @@ atk_amp = 0; // attack amplifier
 def_amp = 0; //defence amplifier
 weap = false; // check if weapon is equipped
 armor = false; // cheak if armor is equipped
-//eq_armor = "none";
-//eq_weap = "none";
+eq_armor = "none";
+eq_weap = "none";
+/*
 eq_armor = global.item_list.bandage.name; // equipped armor name
 eq_weap = global.item_list.stick.name; // equipped weapon name
+*/
 
 #region Movement & Collision 
 

@@ -20,16 +20,16 @@ if (global.inv_open && visible) {
     }
 
     // option num
-    inv_length = array_length(inv);
+    
     op_length = array_length(option);
 
     // run inventory items navigation
     if (!sec_op) {
-        if (pos >= inv_length) {
+        if (pos >= array_length(inv)) {
             pos = 0;
         }
         if (pos < 0) {
-            pos = inv_length - 1;
+            pos = array_length(inv) - 1;
         }
         select_item = pos;
     }
