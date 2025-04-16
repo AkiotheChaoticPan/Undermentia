@@ -275,10 +275,16 @@ function process_tag(_end_index, _page, _start_tag, _start_index, _start_lenght)
 			});
 			break;
 		case "textbox":
+			var _a = [real(_start_tag[1])];
+			if(array_length(_start_tag) >= 5) {
+				_a = array_concat(_a, [real(_start_tag[2]), real(_start_tag[3]), real(_start_tag[4]), real(_start_tag[5])]);
+			} else if(array_length(_start_tag) >= 3) {
+				_a = array_concat(_a, [real(_start_tag[2]), real(_start_tag[3])]);
+			}
 			array_insert(effects, 0, {
 				start : _start_index,
 				effect : "textbox",
-				params : [real(_start_tag[1]), real(_start_tag[2]), real(_start_tag[3]), real(_start_tag[4]), real(_start_tag[5])],
+				params : _a,
 				end_pos : _end_index - 2,
 				page : _page
 			});
