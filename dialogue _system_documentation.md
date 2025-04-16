@@ -77,7 +77,7 @@ This tag triggers a prompt to choose an option from 2 to 6 possibilities. It als
 
 Parameters - option display name(string), dialogue address after selection(string) (repeating for every added option)
 
-#### textbox - currently a little buggy
+#### textbox
 
 This tag makes the text use the selected version of the textbox, alongside with it's size and position.
 
