@@ -2,5 +2,6 @@
   "FolderOrderSettings":[],
   "ResourceOrderSettings":[
     {"name":"obj_npc","order":1,"path":"objects/obj_npc/obj_npc.yy",},
+    {"name":"obj_start_menu","order":2,"path":"objects/obj_start_menu/obj_start_menu.yy",},
   ],
 }

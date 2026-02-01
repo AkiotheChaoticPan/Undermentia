@@ -1,8 +1,8 @@
 {
-  "$GMProject":"",
+  "$GMProject":"v1",
   "%Name":"Undermentia",
   "AudioGroups":[
-    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[],
@@ -41,6 +41,7 @@
     {"$GMFolder":"","%Name":"Tile Sets","folderPath":"folders/Tile Sets.yy","name":"Tile Sets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
+  "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"DTM-Mono.otf","CopyToMask":-1,"filePath":"datafiles","name":"DTM-Mono.otf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"en-us.txt","CopyToMask":-1,"filePath":"datafiles","name":"en-us.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -50,7 +51,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.11.0.179",
+    "IDEVersion":"2024.14.3.217",
   },
   "name":"Undermentia",
   "resources":[
@@ -77,6 +78,7 @@
     {"id":{"name":"obj_save_menu","path":"objects/obj_save_menu/obj_save_menu.yy",},},
     {"id":{"name":"obj_savelocation","path":"objects/obj_savelocation/obj_savelocation.yy",},},
     {"id":{"name":"obj_soul","path":"objects/obj_soul/obj_soul.yy",},},
+    {"id":{"name":"obj_start_menu","path":"objects/obj_start_menu/obj_start_menu.yy",},},
     {"id":{"name":"obj_stat","path":"objects/obj_stat/obj_stat.yy",},},
     {"id":{"name":"obj_title","path":"objects/obj_title/obj_title.yy",},},
     {"id":{"name":"obj_toriel","path":"objects/obj_toriel/obj_toriel.yy",},},
